@@ -1,0 +1,13 @@
+<h1>Editar promoção</h1>
+<% if @promotion.errors.any? %>
+  <div class="alert">
+    <p>Não foi possível editar promoção</p>
+    <p>Confira os erros abaixo</p>
+    <ul>
+      <% @promotion.errors.full_messages.each do |m| %>
+        <li><%= m %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+<%= render "fields" %>
